@@ -1,0 +1,34 @@
+-------------------------------
+  I n s t a l l i n g   C F M
+-------------------------------
+
+1) Ensure that the 'curses' and 'posix' modules are available for Lua
+
+   ( on Debian: aptitude install lua-curses lua-posix )
+
+2) Copy the two files 'cfm.lua' and 'cfmrc.lua' to your computer.
+
+3) Edit 'cfmrc.lua' to suit your preferences.
+
+4) Set the environment variable CFMRC to the full path of 'cfmrc.lua'
+
+   ( for example: export CFMRC=~/cfmrc.lua )
+
+5) Type: lua cfm.lua
+
+   ( h : help; q : quit )
+
+
+This is still very much a work-in-progress.  In particular, error-handling
+is glaringly incomplete.  To see the text of any error messages which cause
+CFM to crash, you need to redirect them into a file, the screen is cleared
+when 'curses' exits -- so:
+
+   lua cfm.lua >cfm.errs
+
+The licence has not yet been decided -- for now, let's say it's the same
+as for Lua itself: the MIT license.
+
+Feedback welcome -- please contact me at: manning@cs.ucc.ie
+
+-- Joseph Manning
